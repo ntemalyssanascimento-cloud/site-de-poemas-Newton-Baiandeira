@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newton Baiandeira - Poesia & Matéria</title>
+    <meta
+      name="description"
+      content="Exposição imersiva e acervo poético visceral do artista itabirano Newton Baiandeira. Um mergulho no ferro, na pedra e na palavra."
+    />
+    <meta property="og:title" content="Newton Baiandeira - Poesia & Matéria" />
+    <meta
+      property="og:description"
+      content="Exposição imersiva e acervo poético visceral do artista itabirano Newton Baiandeira."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              iron: {
+                950: '#080808',
+                900: '#0D0D0D',
+                850: '#121212',
+                800: '#171717',
+                750: '#1F1F1F',
+                700: '#2A2A2A',
+                600: '#3D3D3D',
+                400: '#8A8884',
+                300: '#B5B3AD',
+                200: '#D6D4CD',
+                100: '#ECEAE4',
+                50: '#F7F6F2',
+              },
+              mineral: {
+                crimson: '#9B1C1C',
+                blood: '#771313',
+                rust: '#B45309',
+                terracotta: '#C2410C',
+                ochre: '#D97706',
+              },
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'Georgia', 'serif'],
+              display: ['"Cinzel"', 'serif'],
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      /* Custom fine-art styling */
+      ::selection {
+        background-color: #9b1c1c;
+        color: #ffffff;
+      }
+      /* Custom subtle scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0d0d0d;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #262626;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #9b1c1c;
+      }
+      /* Grain overlay */
+      .bg-grain {
+        background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+        background-size: 24px 24px;
+      }
+      /* Stanza formatting */
+      .poem-stanza {
+        margin-bottom: 1.75rem;
+        line-height: 1.95;
+      }
+      .poem-verse {
+        display: block;
+        transition: color 0.15s ease;
+      }
+      .poem-verse:hover {
+        color: #f7f6f2;
+      }
+      .drop-cap::first-letter {
+        font-family: 'Cinzel', serif;
+        font-size: 3.5rem;
+        float: left;
+        line-height: 0.85;
+        margin-right: 0.75rem;
+        margin-top: 0.25rem;
+        color: #9b1c1c;
+      }
+    </style>
+  </head>
+  <body class="bg-[#0D0D0D] text-[#ECEAE4] font-sans antialiased selection:bg-[#9B1C1C] min-h-screen flex flex-col overflow-x-hidden">
+    <!-- Top Navigation Bar (Strict 3-Zone Contract) -->
+    <header class="sticky top-0 z-40 bg-[#0D0D0D]/95 backdrop-blur-md border-b border-[#2A2A2A]/60 transition-all">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-8">
+        <!-- Zone 1: Single text element wordmark -->
+        <a href="#" class="font-display text-lg sm:text-xl font-bold tracking-widest text-[#ECEAE4] hover:text-[#9B1C1C] transition-colors whitespace-nowrap shrink-0">
+          NEWTON BAIANDEIRA
+        </a>
+
+        <!-- Zone 2: Clean single-line text navigation links -->
+        <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-medium text-[#8A8884]">
+          <a href="#mural-poemas" class="hover:text-[#ECEAE4] transition-colors whitespace-nowrap shrink-0">Acervo & Poemas</a>
+          <a href="#sobre-o-poeta" class="hover:text-[#ECEAE4] transition-colors whitespace-nowrap shrink-0">O Poeta & Itabira</a>
+          <a href="#curadoria" class="hover:text-[#ECEAE4] transition-colors whitespace-nowrap shrink-0">Ensaio Curatorial</a>
+          <a href="#itabira-origem" class="hover:text-[#ECEAE4] transition-colors whitespace-nowrap shrink-0">Geografia do Ferro</a>
+        </nav>
+
+        <!-- Zone 3: 1 primary action -->
+        <div class="flex items-center gap-4 shrink-0">
+          <a
+            href="#mural-poemas"
+            class="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#ECEAE4] bg-[#9B1C1C] hover:bg-[#771313] transition-colors rounded-sm whitespace-nowrap shrink-0 flex items-center gap-2"
+          >
+            <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+            <span>Explorar Poemas</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <!-- HERO SECTION: Poesia & Matéria -->
+      <section class="relative min-h-[90vh] flex items-center justify-center border-b border-[#2A2A2A]/60 overflow-hidden">
+        <!-- Background Imagery with Dark Scrim -->
+        <div class="absolute inset-0 z-0">
+          <img
+            src="/src/assets/images/hero_itabira_iron_1793206678800.jpg"
+            alt="Cordilheiras minerais de Itabira em contraste dramático de carvão e ferro"
+            class="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-40 scale-105 transform animate-pulse duration-[10000ms]"
+            referrerpolicy="no-referrer"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/75 to-[#0D0D0D]/60"></div>
+          <div class="absolute inset-0 bg-radial from-transparent via-[#0D0D0D]/50 to-[#0D0D0D]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 py-20 text-center flex flex-col items-center">
+          <!-- Curatorial Origin Tag -->
+          <div class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.25em] text-[#8A8884] mb-6">
+            <span>Itabira, Minas Gerais</span>
+            <span aria-hidden="true">·</span>
+            <span class="text-[#9B1C1C] font-semibold">Poesia & Matéria</span>
+            <span aria-hidden="true">·</span>
+            <span>Edição Definitiva</span>
+          </div>
+
+          <!-- Main Monumental Heading -->
+          <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#ECEAE4] max-w-4xl leading-[1.1] mb-6">
+            NEWTON BAIANDEIRA
+          </h1>
+
+          <p class="font-serif italic text-xl sm:text-2xl lg:text-3xl text-[#D6D4CD] max-w-2xl font-light leading-relaxed mb-8">
+            "A palavra não descreve a rocha ferrosa: ela a parte ao meio."
+          </p>
+
+          <p class="text-sm sm:text-base text-[#8A8884] max-w-2xl leading-relaxed font-light mb-10">
+            A obra poética de Newton Baiandeira esculpe o silêncio da terra itabirana. Um embate visceral entre a carne viva do homem e o mineral impiedoso das montanhas devoradas pelo tempo.
+          </p>
+
+          <!-- Action Buttons Strip -->
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="#mural-poemas"
+              class="px-8 py-3.5 text-xs font-semibold uppercase tracking-widest text-[#ECEAE4] bg-[#9B1C1C] hover:bg-[#771313] transition-all rounded-sm flex items-center gap-3 shadow-lg shadow-[#9B1C1C]/20"
+            >
+              <i data-lucide="feather" class="w-4 h-4"></i>
+              <span>Abrir Acervo de Poemas</span>
+            </a>
+            <a
+              href="#sobre-o-poeta"
+              class="px-7 py-3.5 text-xs font-semibold uppercase tracking-widest text-[#D6D4CD] border border-[#3D3D3D] hover:border-[#8A8884] hover:bg-[#181818] transition-all rounded-sm flex items-center gap-3"
+            >
+              <i data-lucide="user" class="w-4 h-4"></i>
+              <span>Conhecer o Poeta</span>
+            </a>
+          </div>
+
+          <!-- Quick Operational Strip -->
+          <div class="mt-16 pt-8 border-t border-[#2A2A2A]/60 grid grid-cols-2 sm:grid-cols-4 gap-6 text-left w-full max-w-3xl">
+            <div>
+              <span class="block text-[11px] font-mono uppercase tracking-wider text-[#8A8884]">Origem</span>
+              <span class="text-sm font-medium text-[#ECEAE4]">Itabira · MG</span>
+            </div>
+            <div>
+              <span class="block text-[11px] font-mono uppercase tracking-wider text-[#8A8884]">Vertente</span>
+              <span class="text-sm font-medium text-[#ECEAE4]">Lirismo Mineral</span>
+            </div>
+            <div>
+              <span class="block text-[11px] font-mono uppercase tracking-wider text-[#8A8884]">Obras em Destaque</span>
+              <span class="text-sm font-medium text-[#ECEAE4] tabular-nums">05 Poemas Centrais</span>
+            </div>
+            <div>
+              <span class="block text-[11px] font-mono uppercase tracking-wider text-[#8A8884]">Atmósfera</span>
+              <span class="text-sm font-medium text-[#ECEAE4]">Carvão & Ferro</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: O POETA (Sobre Newton Baiandeira) -->
+      <section id="sobre-o-poeta" class="py-24 px-4 sm:px-6 lg:px-8 border-b border-[#2A2A2A]/60 bg-[#0D0D0D]">
+        <div class="max-w-7xl mx-auto">
+          <!-- Curatorial Section Kicker -->
+          <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#9B1C1C] mb-3">
+            <span>01</span>
+            <span aria-hidden="true">/</span>
+            <span>Biografia & Manifesto</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#ECEAE4] mb-12">
+            O Poeta da Fratura e do Silêncio
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <!-- Portrait & Curatorial Frame (5 Cols) -->
+            <div class="lg:col-span-5 space-y-4">
+              <div class="relative overflow-hidden border border-[#2A2A2A] rounded-sm bg-[#121212] group shadow-xl">
+                <img
+                  src="/src/assets/images/newton_baiandeira_real.jpg"
+                  alt="Fotografia histórica do cantor, compositor e poeta itabirano Newton Baiandeira"
+                  class="w-full h-auto max-h-[580px] object-cover object-top filter grayscale contrast-115 brightness-95 group-hover:grayscale-0 group-hover:scale-102 transition-all duration-700"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-80 pointer-events-none"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-xs font-mono text-[#D6D4CD] bg-[#0D0D0D]/90 backdrop-blur-sm p-3.5 border border-[#2A2A2A]">
+                  <div class="flex items-center justify-between">
+                    <p class="font-semibold text-[#ECEAE4] text-sm">Newton Baiandeira</p>
+                    <span class="text-[11px] text-[#9B1C1C] font-mono">1952 – 2012</span>
+                  </div>
+                  <p class="text-[#8A8884] text-[11px] mt-0.5">Cantor, compositor e poeta · Itabira/MG</p>
+                </div>
+              </div>
+              <p class="text-xs font-serif italic text-[#8A8884] text-center max-w-sm mx-auto">
+                "Minha relação com Itabira é meio que de filho agarrado à saia de mãe."
+              </p>
+            </div>
+
+            <!-- Biographical & Critical Prose (7 Cols) -->
+            <div class="lg:col-span-7 space-y-6 text-[#D6D4CD] font-light leading-relaxed">
+              <p class="text-base sm:text-lg font-serif italic text-[#ECEAE4] leading-relaxed drop-cap">
+                Nascido no solo áspero de Itabira, no coração do quadrilátero ferrífero de Minas Gerais, Newton Baiandeira não herdou apenas a sombra mitológica do pico do Cauê: herdou o tremor contínuo das britadeiras, o luto da pedra desfeita e a respiração pesada do homem que vive cercado pelo ferro.
+              </p>
+
+              <p class="text-sm sm:text-base text-[#B5B3AD]">
+                Sua poética se recusa ao ornamento fácil. Cada estrofe de Baiandeira opera como uma fratura: a palavra é batida contra a bigorna até que reste apenas o tutano mineral da linguagem. Nela, o sangue, o amor, a solidão das madrugadas e o ranger dos comboios da Estrada de Ferro Vitória a Minas fundem-se em um único organismo estético.
+              </p>
+
+              <p class="text-sm sm:text-base text-[#B5B3AD]">
+                Diferente do lirismo contemplativo tradicional, Baiandeira pratica uma poesia visceral, onde a memória itabirana não é nostalgia complacente, mas ferida aberta e matéria de resistência. É o testemunho lírico da cidade de onde se arrancou a serra, mas onde permaneceu intacta a substância indomável do verso.
+              </p>
+
+              <!-- Poetic Manifesto Box -->
+              <div class="p-6 bg-[#121212] border border-[#2A2A2A] rounded-sm relative mt-8">
+                <div class="absolute -top-3 left-6 px-3 bg-[#0D0D0D] text-[11px] font-mono uppercase tracking-widest text-[#9B1C1C] border border-[#2A2A2A]">
+                  Fragmento do Manifesto
+                </div>
+                <blockquote class="font-serif italic text-base sm:text-lg text-[#ECEAE4] leading-relaxed mt-2">
+                  "Não escrevo para consolar. Escrevo para que a pedra se lembre de que já foi montanha, e para que o homem compreenda que sua dor também tem a densidade da hematita."
+                </blockquote>
+                <div class="mt-4 flex items-center justify-between text-xs font-mono text-[#8A8884] pt-3 border-t border-[#2A2A2A]">
+                  <span>Caderno de Ferro · Newton Baiandeira</span>
+                  <span>Itabira, 2026</span>
+                </div>
+              </div>
+
+              <!-- Curatorial Highlights -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                <div class="p-4 border border-[#2A2A2A] bg-[#121212]/50">
+                  <span class="text-xs font-mono uppercase text-[#9B1C1C] block mb-1">01. Estética</span>
+                  <span class="text-xs text-[#ECEAE4] font-medium">Contraste brutalista, xilogravura lírica e textura de carvão.</span>
+                </div>
+                <div class="p-4 border border-[#2A2A2A] bg-[#121212]/50">
+                  <span class="text-xs font-mono uppercase text-[#9B1C1C] block mb-1">02. Raiz</span>
+                  <span class="text-xs text-[#ECEAE4] font-medium">Tradição itabirana ressignificada em dicção visceral contemporânea.</span>
+                </div>
+                <div class="p-4 border border-[#2A2A2A] bg-[#121212]/50">
+                  <span class="text-xs font-mono uppercase text-[#9B1C1C] block mb-1">03. Matéria</span>
+                  <span class="text-xs text-[#ECEAE4] font-medium">O ferro, a hematita, a carne, o leito seco do rio e o tempo.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: MURAL VISUAL DE POEMAS (Cards & Galeria) -->
+      <section id="mural-poemas" class="py-24 px-4 sm:px-6 lg:px-8 border-b border-[#2A2A2A]/60 bg-[#0D0D0D] relative">
+        <div class="max-w-7xl mx-auto">
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#9B1C1C] mb-3">
+                <span>02</span>
+                <span aria-hidden="true">/</span>
+                <span>Mural & Galeria Poética</span>
+              </div>
+              <h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#ECEAE4]">
+                Poemas & Matéria Visual
+              </h2>
+              <p class="text-sm text-[#8A8884] max-w-xl mt-2 font-light">
+                Selecione uma obra para acessar a experiência imersiva completa, o texto integral em formatação editorial e o estudo visual em alta definição.
+              </p>
+            </div>
+
+            <!-- Search and Filter Controls -->
+            <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+              <!-- Search Input -->
+              <div class="relative min-w-[240px]">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Buscar por verso, título..."
+                  class="w-full bg-[#121212] border border-[#2A2A2A] text-xs text-[#ECEAE4] placeholder-[#666] px-3.5 py-2.5 rounded-sm focus:outline-none focus:border-[#9B1C1C] transition-colors"
+                />
+                <i data-lucide="search" class="w-3.5 h-3.5 text-[#666] absolute right-3 top-3 pointer-events-none"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Filter Tabs -->
+          <div class="flex flex-wrap items-center gap-2 mb-10 pb-4 border-b border-[#2A2A2A]/40" id="filter-container">
+            <button
+              class="filter-btn active px-4 py-2 text-xs uppercase tracking-wider font-medium text-[#ECEAE4] bg-[#1F1F1F] border border-[#3D3D3D] rounded-sm transition-colors cursor-pointer"
+              data-category="all"
+            >
+              Todos os Poemas (<span id="count-all">5</span>)
+            </button>
+            <button
+              class="filter-btn px-4 py-2 text-xs uppercase tracking-wider font-medium text-[#8A8884] hover:text-[#ECEAE4] bg-[#121212] border border-[#2A2A2A] rounded-sm transition-colors cursor-pointer"
+              data-category="ferro"
+            >
+              Ferro & Minério
+            </button>
+            <button
+              class="filter-btn px-4 py-2 text-xs uppercase tracking-wider font-medium text-[#8A8884] hover:text-[#ECEAE4] bg-[#121212] border border-[#2A2A2A] rounded-sm transition-colors cursor-pointer"
+              data-category="tempo"
+            >
+              Carne & Tempo
+            </button>
+            <button
+              class="filter-btn px-4 py-2 text-xs uppercase tracking-wider font-medium text-[#8A8884] hover:text-[#ECEAE4] bg-[#121212] border border-[#2A2A2A] rounded-sm transition-colors cursor-pointer"
+              data-category="rocha"
+            >
+              Rocha & Silêncio
+            </button>
+            <button
+              class="filter-btn px-4 py-2 text-xs uppercase tracking-wider font-medium text-[#8A8884] hover:text-[#ECEAE4] bg-[#121212] border border-[#2A2A2A] rounded-sm transition-colors cursor-pointer"
+              data-category="itabira"
+            >
+              Itabira & Raízes
+            </button>
+          </div>
+
+          <!-- POEM CARDS GRID (Dynamic Masonry Style) -->
+          <div id="poems-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Cards rendered dynamically via Vanilla JS -->
+          </div>
+
+          <!-- Empty State (hidden by default) -->
+          <div id="no-results" class="hidden text-center py-20 border border-dashed border-[#2A2A2A] rounded-sm p-8">
+            <i data-lucide="compass" class="w-8 h-8 text-[#9B1C1C] mx-auto mb-3"></i>
+            <h3 class="font-display text-lg text-[#ECEAE4] font-semibold">Nenhum poema encontrado</h3>
+            <p class="text-xs text-[#8A8884] mt-1">Tente outro termo de busca ou limpe o filtro selecionado.</p>
+            <button
+              id="reset-search"
+              class="mt-4 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#ECEAE4] bg-[#1F1F1F] border border-[#3D3D3D] hover:bg-[#2A2A2A] rounded-sm transition-colors"
+            >
+              Restaurar Acervo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: ENSAIO CURATORIAL & GEOGRAFIA DO FERRO -->
+      <section id="curadoria" class="py-24 px-4 sm:px-6 lg:px-8 border-b border-[#2A2A2A]/60 bg-[#121212]/40">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6">
+              <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#9B1C1C]">
+                <span>03</span>
+                <span aria-hidden="true">/</span>
+                <span>Curadoria & Geografia</span>
+              </div>
+              <h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#ECEAE4]">
+                A Geografia Moral do Ferro Itabirano
+              </h2>
+              <p class="text-sm sm:text-base text-[#B5B3AD] font-light leading-relaxed">
+                Em Newton Baiandeira, o território de Itabira transcende o mapa físico para transformar-se em topografia moral. Não se trata da apologia à mineração, mas da constatação poética de que a matéria extraída deixa no peito de quem fica uma cratera equivalente.
+              </p>
+              <div class="space-y-3 font-serif text-sm text-[#D6D4CD] border-t border-[#2A2A2A] pt-4">
+                <p class="italic text-[#ECEAE4]">
+                  "Itabira tem noventa por cento de ferro nas calçadas.<br />
+                  Oitenta por cento de ferro nas almas.<br />
+                  E essa teimosia dura de continuar brotando palavra onde o solo foi rapado até o osso."
+                </p>
+                <span class="block text-xs font-mono uppercase text-[#8A8884] tracking-wider">— Da introdução aos Manuscritos de Cauê</span>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 bg-[#0D0D0D] border border-[#2A2A2A] p-8 rounded-sm space-y-6">
+              <h3 class="font-display text-lg text-[#ECEAE4] font-semibold border-b border-[#2A2A2A] pb-3">
+                Estrutura & Parâmetros da Obra
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-start justify-between gap-4 pb-3 border-b border-[#1F1F1F]">
+                  <span class="text-xs font-mono uppercase text-[#8A8884]">Ritmo & Cadência</span>
+                  <span class="text-xs text-[#ECEAE4] text-right font-serif">Versos decassílabos fraturados, cesuras abruptas, ritmo percussivo de bigorna.</span>
+                </div>
+                <div class="flex items-start justify-between gap-4 pb-3 border-b border-[#1F1F1F]">
+                  <span class="text-xs font-mono uppercase text-[#8A8884]">Vocabulário Central</span>
+                  <span class="text-xs text-[#ECEAE4] text-right font-serif">Hematita, ganga, poeira rubra, dorna, vagão, fratura, medula rochosa.</span>
+                </div>
+                <div class="flex items-start justify-between gap-4 pb-3 border-b border-[#1F1F1F]">
+                  <span class="text-xs font-mono uppercase text-[#8A8884]">Diálogo Estético</span>
+                  <span class="text-xs text-[#ECEAE4] text-right font-serif">Iberê Camargo, Drummond de Andrade, João Cabral de Melo Neto e Anselm Kiefer.</span>
+                </div>
+                <div class="flex items-start justify-between gap-4">
+                  <span class="text-xs font-mono uppercase text-[#8A8884]">Preservação</span>
+                  <span class="text-xs text-[#ECEAE4] text-right font-serif">Acervo digital permanente organizado por pesquisadores de Itabira/MG.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="itabira-origem" class="bg-[#080808] border-t border-[#2A2A2A] py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="space-y-2 text-center md:text-left">
+          <span class="font-display text-lg font-bold tracking-widest text-[#ECEAE4]">NEWTON BAIANDEIRA</span>
+          <p class="text-xs text-[#8A8884] font-light">
+            Poesia & Matéria · Memorial Artístico e Acervo Poético de Itabira, Minas Gerais.
+          </p>
+          <p class="text-[11px] font-mono text-[#666]">
+            © 2026 Newton Baiandeira. Todos os direitos reservados aos herdeiros e curadores do acervo.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-6 text-xs text-[#8A8884] font-mono uppercase tracking-wider">
+          <div class="flex items-center gap-2 text-[#9B1C1C]">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            <span>Itabira · Minas Gerais</span>
+          </div>
+          <span aria-hidden="true" class="hidden sm:inline">·</span>
+          <a href="#" class="hover:text-[#ECEAE4] transition-colors flex items-center gap-1">
+            <span>Voltar ao Topo</span>
+            <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- POEM VIEWER MODAL (Immersive Split Screen) -->
+    <div
+      id="poem-modal"
+      class="fixed inset-0 z-50 hidden bg-[#080808]/95 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 lg:p-8 overflow-y-auto"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-poem-title"
+    >
+      <div
+        class="bg-[#0D0D0D] border border-[#2A2A2A] rounded-sm w-full max-w-6xl max-h-[92vh] flex flex-col lg:flex-row overflow-hidden shadow-2xl relative animate-in fade-in zoom-in-95 duration-200"
+      >
+        <!-- Modal Close Button -->
+        <button
+          id="modal-close-btn"
+          class="absolute top-4 right-4 z-20 p-2.5 bg-[#171717] hover:bg-[#9B1C1C] text-[#ECEAE4] border border-[#2A2A2A] rounded-sm transition-colors cursor-pointer"
+          aria-label="Fechar visualizador de poema"
+        >
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+
+        <!-- Left Column: Visual Artwork Display (45%) -->
+        <div class="lg:w-5/12 bg-[#080808] border-b lg:border-b-0 lg:border-r border-[#2A2A2A] flex flex-col justify-between relative overflow-hidden group">
+          <div class="relative w-full h-64 sm:h-80 lg:h-full min-h-[320px] overflow-hidden">
+            <img
+              id="modal-poem-image"
+              src=""
+              alt=""
+              class="w-full h-full object-cover filter contrast-120 group-hover:scale-105 transition-transform duration-700"
+              referrerpolicy="no-referrer"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-70"></div>
+          </div>
+
+          <!-- Artwork Caption Strip -->
+          <div class="p-4 bg-[#0D0D0D] border-t border-[#2A2A2A] flex items-center justify-between text-xs font-mono text-[#8A8884]">
+            <span id="modal-art-caption">Estudo Visual em Carvão & Minério</span>
+            <span class="text-[#9B1C1C]">Acervo Baiandeira</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Poem Text & Controls (55%) -->
+        <div class="lg:w-7/12 flex flex-col h-full max-h-[92vh] overflow-hidden bg-[#0D0D0D]">
+          <!-- Top Utility & Accessibility Bar -->
+          <div class="p-6 border-b border-[#2A2A2A] flex flex-wrap items-center justify-between gap-4 shrink-0">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#9B1C1C] mb-1">
+                <span id="modal-poem-category">Categoria</span>
+                <span aria-hidden="true">·</span>
+                <span id="modal-poem-year">Ano</span>
+              </div>
+              <h3 id="modal-poem-title" class="font-display text-2xl sm:text-3xl font-bold text-[#ECEAE4]">
+                Título do Poema
+              </h3>
+            </div>
+
+            <!-- Reading Utilities -->
+            <div class="flex items-center gap-2">
+              <!-- Font Size Toggle -->
+              <div class="flex items-center border border-[#2A2A2A] bg-[#171717] rounded-sm p-0.5">
+                <button
+                  id="font-decrease"
+                  class="px-2 py-1 text-xs text-[#8A8884] hover:text-[#ECEAE4] hover:bg-[#262626] transition-colors rounded-xs"
+                  title="Diminuir fonte"
+                >
+                  A-
+                </button>
+                <button
+                  id="font-increase"
+                  class="px-2 py-1 text-xs text-[#8A8884] hover:text-[#ECEAE4] hover:bg-[#262626] transition-colors rounded-xs font-semibold"
+                  title="Aumentar fonte"
+                >
+                  A+
+                </button>
+              </div>
+
+              <!-- Audio Recitation Simulator -->
+              <button
+                id="listen-poem-btn"
+                class="px-3 py-1.5 text-xs font-medium text-[#ECEAE4] bg-[#171717] hover:bg-[#262626] border border-[#2A2A2A] rounded-sm transition-colors flex items-center gap-1.5"
+                title="Ouvir declamação"
+              >
+                <i data-lucide="volume-2" class="w-3.5 h-3.5 text-[#9B1C1C]"></i>
+                <span id="listen-btn-text">Declamar</span>
+              </button>
+
+              <!-- Copy Poem Button -->
+              <button
+                id="copy-poem-btn"
+                class="px-3 py-1.5 text-xs font-medium text-[#ECEAE4] bg-[#171717] hover:bg-[#262626] border border-[#2A2A2A] rounded-sm transition-colors flex items-center gap-1.5"
+                title="Copiar texto do poema"
+              >
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span id="copy-btn-text">Copiar</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Scrollable Full Poem Verses -->
+          <div id="poem-scroll-container" class="p-6 sm:p-8 overflow-y-auto flex-grow bg-grain">
+            <div id="modal-poem-content" class="font-serif text-[#ECEAE4] text-base sm:text-lg max-w-xl mx-auto space-y-6">
+              <!-- Verses injected here -->
+            </div>
+
+            <!-- Poem Curatorial Context Note -->
+            <div class="mt-12 pt-6 border-t border-[#2A2A2A] max-w-xl mx-auto">
+              <span class="text-[11px] font-mono uppercase tracking-widest text-[#9B1C1C] block mb-1">
+                Nota do Acervo
+              </span>
+              <p id="modal-poem-note" class="text-xs text-[#8A8884] font-sans leading-relaxed">
+                Contexto editorial sobre a criação desta peça e sua circulação em Itabira.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bottom Navigation Bar (Previous / Next) -->
+          <div class="p-4 sm:p-6 border-t border-[#2A2A2A] bg-[#121212] flex items-center justify-between shrink-0">
+            <button
+              id="modal-prev-btn"
+              class="px-4 py-2 text-xs font-mono uppercase tracking-wider text-[#D6D4CD] hover:text-[#ECEAE4] bg-[#171717] hover:bg-[#262626] border border-[#2A2A2A] rounded-sm transition-colors flex items-center gap-2 cursor-pointer"
+            >
+              <i data-lucide="chevron-left" class="w-4 h-4"></i>
+              <span>Anterior</span>
+            </button>
+
+            <span id="modal-counter" class="text-xs font-mono text-[#8A8884] tabular-nums">
+              01 / 05
+            </span>
+
+            <button
+              id="modal-next-btn"
+              class="px-4 py-2 text-xs font-mono uppercase tracking-wider text-[#D6D4CD] hover:text-[#ECEAE4] bg-[#171717] hover:bg-[#262626] border border-[#2A2A2A] rounded-sm transition-colors flex items-center gap-2 cursor-pointer"
+            >
+              <span>Próximo</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div
+      id="toast"
+      class="fixed bottom-6 right-6 z-50 hidden bg-[#171717] border border-[#9B1C1C] text-[#ECEAE4] px-4 py-3 rounded-sm shadow-xl text-xs font-mono flex items-center gap-3 transition-opacity duration-300"
+    >
+      <i data-lucide="check-circle" class="w-4 h-4 text-[#9B1C1C]"></i>
+      <span id="toast-message">Poema copiado com sucesso.</span>
+    </div>
+
+    <!-- COMPLETE VANILLA JAVASCRIPT LOGIC -->
+    <script>
+      // 1. DATA: 5 Visceral Poems of Newton Baiandeira with Dedicated Images & Metadata
+      const POEMS_DATA = [
+        {
+          id: 1,
+          slug: 'fratura-do-minerio',
+          title: 'Fratura do Minério',
+          category: 'ferro',
+          categoryLabel: 'Ferro & Minério',
+          year: '1987',
+          metric: 'Decassílabos Quebrados',
+          image: '/src/assets/images/poema_fratura_1793206680382.jpg',
+          imageAlt: 'Arte em carvão de bloco de hematita rachado com veios vermelhos de sangue mineral',
+          caption: 'Estudo em carvão e pigmento ocre · Fratura Primária',
+          excerpt: 'A montanha estala seu costado duro / e no silêncio da pedreira aberta / o ferro sangra um mineral escuro.',
+          stanzas: [
+            [
+              'A montanha estala seu costado duro,',
+              'onde o punho do homem fere a terra;',
+              'e no silêncio da pedreira aberta',
+              'o ferro sangra um mineral escuro.'
+            ],
+            [
+              'Não há queixa na rocha que se fende,',
+              'nem oração na pá que a desmembra;',
+              'apenas a medula que se lembra',
+              'do fogo primordial que a compreende.'
+            ],
+            [
+              'Trabalho a estrofe como quem martela',
+              'a dura ganga sobre o peito frio:',
+              'não busco o adorno da palavra bela,',
+              'mas a fenda por onde corre o rio.'
+            ],
+            [
+              'Fica o homem com sua mão vazia,',
+              'fica o abismo cavado no horizonte;',
+              'e a pedra, antes de virar silêncio e guia,',
+              'grava seu peso vivo em nossa fronte.'
+            ]
+          ],
+          note: 'Escrito após a detonação da cava central de Itabira. Este poema estabelece a equivalência baiandeirana entre a fratura geológica da montanha e a ruptura lírica da voz humana.'
+        },
+        {
+          id: 2,
+          slug: 'o-canto-da-poeira-vermelha',
+          title: 'O Canto da Poeira Vermelha',
+          category: 'itabira',
+          categoryLabel: 'Itabira & Raízes',
+          year: '1992',
+          metric: 'Versos Livres & Ritmo Ferroviário',
+          image: '/src/assets/images/poema_canto_1793206681346.jpg',
+          imageAlt: 'Xilogravura brasileira dos trilhos de minério serpenteando montanhas envoltas em névoa',
+          caption: 'Xilogravura sobre papel de linho · Paisagem de Ferro',
+          excerpt: 'O trem desce rangendo a serra curva / levando o tutano do nosso chão, / e a poeira vermelha cobre a casa / como um sudário de contemplação.',
+          stanzas: [
+            [
+              'O trem desce rangendo a serra curva',
+              'levando o tutano do nosso chão,',
+              'e a poeira vermelha cobre a casa',
+              'como um sudário de contemplação.'
+            ],
+            [
+              'Cobre as telhas gastas de Itabira,',
+              'as laranjeiras secas no quintal,',
+              'os retratos calados na parede',
+              'e a boca do operário sem vintém.'
+            ],
+            [
+              'Não nos resta a montanha com seus picos,',
+              'resta apenas o oco do seu vácuo;',
+              'mas onde arrancaram a hematita bruta',
+              'ficou o eco que nenhum tempo cala.'
+            ],
+            [
+              'Respiro esse pó que é nossa história,',
+              'mastigo a terra rubra dos ancestrais:',
+              'somos feitos de ferro e de memória,',
+              'e quanto mais nos cavam, somos mais.'
+            ]
+          ],
+          note: 'Homenagem aos operários da Estrada de Ferro Vitória a Minas e aos habitantes dos morros de Itabira, que convivem com a suspensão perpétua do pó de ferro no ar e na língua.'
+        },
+        {
+          id: 3,
+          slug: 'anatomia-da-ausencia',
+          title: 'Anatomia da Ausência',
+          category: 'tempo',
+          categoryLabel: 'Carne & Tempo',
+          year: '1999',
+          metric: 'Quartetos Elegíacos',
+          image: '/src/assets/images/poema_anatomia_1793206682417.jpg',
+          imageAlt: 'Desenho em carvão e ponta-seca de tórax humano entrelaçado a raízes e pedra mineral',
+          caption: 'Ponta-seca e carvão mineral · Anatomia Lítica',
+          excerpt: 'Tenho costelas feitas de basalto / e um pulmão que aprendeu a suportar / o peso imenso do silêncio alto / onde nenhum pássaro ousa cantar.',
+          stanzas: [
+            [
+              'Tenho costelas feitas de basalto',
+              'e um pulmão que aprendeu a suportar',
+              'o peso imenso do silêncio alto',
+              'onde nenhum pássaro ousa cantar.'
+            ],
+            [
+              'Quando o amor deserta o aposento',
+              'não há lágrimas nem desespero leve:',
+              'há um endurecer de pavimento,',
+              'uma geada amarga que não ferve.'
+            ],
+            [
+              'Raízes velhas prendem-se à fratura,',
+              'buscando água onde só há carvão;',
+              'a ausência ganha sólida moldura',
+              'no leito rígido do coração.'
+            ],
+            [
+              'Se o tempo passa e tudo se desmancha,',
+              'esta falta que trago não se move:',
+              'é como a rocha que a ventania mancha,',
+              'mas que não tomba sob o peso que a chove.'
+            ]
+          ],
+          note: 'Poema lírico-existencial sobre o luto e o enrijecimento afetivo. Baiandeira explora a transformação da dor humana em substância mineral incorruptível.'
+        },
+        {
+          id: 4,
+          slug: 'insonia-na-rocha',
+          title: 'Insônia na Rocha',
+          category: 'rocha',
+          categoryLabel: 'Rocha & Silêncio',
+          year: '2005',
+          metric: 'Estrofes de Vigília',
+          image: '/src/assets/images/poema_insonia_1793206683508.jpg',
+          imageAlt: 'Arte monocromática de monólito de granito suspenso no abismo sob luz dramática',
+          caption: 'Grafite e carvão comprimido · Monólito Suspenso',
+          excerpt: 'Às três da madrugada, a pedra pensa. / Suspensa sobre o vácuo da garganta, / sua mudez é uma presença densa / que nenhum galo no horizonte espanta.',
+          stanzas: [
+            [
+              'Às três da madrugada, a pedra pensa.',
+              'Suspensa sobre o vácuo da garganta,',
+              'sua mudez é uma presença densa',
+              'que nenhum galo no horizonte espanta.'
+            ],
+            [
+              'Vigilo com a rocha o céu sem lua,',
+              'dois corpos duros que a noite mede;',
+              'a sombra estende sua capa nua',
+              'e a morte passa sem que nada peça.'
+            ],
+            [
+              'Por que escrever se o mineral resiste',
+              'sem uma vírgula de vaidade ou medo?',
+              'A rocha fica, silenciosa e triste,',
+              'guardando a chave de um antigo segredo.'
+            ],
+            [
+              'E ao primeiro clarão da madrugada,',
+              'quando o sol toca a aresta da montanha,',
+              'vejo que a insônia não foi em vão forjada:',
+              'a luz também é lâmina que assanha.'
+            ]
+          ],
+          note: 'Considerado pelos críticos de Minas Gerais como a obra-prima da maturidade poética de Newton Baiandeira, meditando sobre a vigília metafísica em diálogo com a matéria mineral.'
+        },
+        {
+          id: 5,
+          slug: 'elegia-das-aguas-ferrosas',
+          title: 'Elegia das Águas Ferrosas',
+          category: 'ferro',
+          categoryLabel: 'Ferro & Minério',
+          year: '2016',
+          metric: 'Canto Fúnebre e Telúrico',
+          image: '/src/assets/images/poema_elegia_1793206683092.jpg',
+          imageAlt: 'Pintura expressionista abstrata de rio avermelhado cortando a terra negra escarpada',
+          caption: 'Betume, óxido de ferro e óleo sobre tela · Leito Rubro',
+          excerpt: 'O rio desce com a cor da ferrugem, / lavando os pés das serras amputadas; / em suas águas densas não há virgem, / apenas pedras no lodo afogadas.',
+          stanzas: [
+            [
+              'O rio desce com a cor da ferrugem,',
+              'lavando os pés das serras amputadas;',
+              'em suas águas densas não há virgem,',
+              'apenas pedras no lodo afogadas.'
+            ],
+            [
+              'Era cristal em tempos esquecidos,',
+              'espelho puro da mata que tombou;',
+              'hoje carrega os passos submergidos',
+              'daquela serra que o comboio levou.'
+            ],
+            [
+              'Mas neste curso trágico e barrento',
+              'onde o ferro sedimenta sua morte,',
+              'há uma corrente viva contra o vento,',
+              'uma força subterrânea dura e forte.'
+            ],
+            [
+              'Água ferrosa, lava a minha boca!',
+              'Dá-me a crueza da tua correnteza:',
+              'que a minha voz, na sua lida rouca,',
+              'seja o tributo à tua natureza!'
+            ]
+          ],
+          note: 'Elegia ecológica e telúrica sobre as bacias hidrográficas feridas do Médio Piracicaba e do Rio Doce. O poema conclui com uma invocação à força da palavra poética como testemunho perene.'
+        }
+      ];
+
+      // 2. STATE MANAGEMENT
+      let currentFilter = 'all';
+      let currentSearch = '';
+      let currentPoemIndex = 0;
+      let currentFontSize = 18; // default font size in px
+      let isReciting = false;
+      let recitationUtterance = null;
+
+      // 3. INITIALIZATION & DOM REFS
+      const poemsGrid = document.getElementById('poems-grid');
+      const noResults = document.getElementById('no-results');
+      const searchInput = document.getElementById('search-input');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const resetSearchBtn = document.getElementById('reset-search');
+
+      // Modal elements
+      const poemModal = document.getElementById('poem-modal');
+      const modalCloseBtn = document.getElementById('modal-close-btn');
+      const modalPoemTitle = document.getElementById('modal-poem-title');
+      const modalPoemCategory = document.getElementById('modal-poem-category');
+      const modalPoemYear = document.getElementById('modal-poem-year');
+      const modalPoemImage = document.getElementById('modal-poem-image');
+      const modalArtCaption = document.getElementById('modal-art-caption');
+      const modalPoemContent = document.getElementById('modal-poem-content');
+      const modalPoemNote = document.getElementById('modal-poem-note');
+      const modalCounter = document.getElementById('modal-counter');
+      const modalPrevBtn = document.getElementById('modal-prev-btn');
+      const modalNextBtn = document.getElementById('modal-next-btn');
+
+      // Utility buttons
+      const fontDecreaseBtn = document.getElementById('font-decrease');
+      const fontIncreaseBtn = document.getElementById('font-increase');
+      const copyPoemBtn = document.getElementById('copy-poem-btn');
+      const copyBtnText = document.getElementById('copy-btn-text');
+      const listenPoemBtn = document.getElementById('listen-poem-btn');
+      const listenBtnText = document.getElementById('listen-btn-text');
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toast-message');
+
+      // 4. RENDER POEMS GRID
+      function renderPoems() {
+        const filtered = POEMS_DATA.filter((poem) => {
+          const matchesCategory = currentFilter === 'all' || poem.category === currentFilter;
+          const searchLower = currentSearch.toLowerCase().trim();
+          const matchesSearch =
+            !searchLower ||
+            poem.title.toLowerCase().includes(searchLower) ||
+            poem.excerpt.toLowerCase().includes(searchLower) ||
+            poem.stanzas.some((s) => s.some((v) => v.toLowerCase().includes(searchLower))) ||
+            poem.categoryLabel.toLowerCase().includes(searchLower);
+
+          return matchesCategory && matchesSearch;
+        });
+
+        if (filtered.length === 0) {
+          poemsGrid.innerHTML = '';
+          noResults.classList.remove('hidden');
+        } else {
+          noResults.classList.add('hidden');
+          poemsGrid.innerHTML = filtered
+            .map((poem) => {
+              return `
+              <article
+                class="group bg-[#121212] border border-[#2A2A2A] hover:border-[#9B1C1C] transition-all duration-300 rounded-sm overflow-hidden flex flex-col justify-between cursor-pointer"
+                onclick="openPoemModalById(${poem.id})"
+                tabindex="0"
+                role="button"
+                aria-label="Abrir poema ${poem.title}"
+                onkeydown="if(event.key === 'Enter') openPoemModalById(${poem.id})"
+              >
+                <!-- Image Header with Hover Scale -->
+                <div class="relative aspect-[4/3] w-full overflow-hidden bg-[#0D0D0D]">
+                  <img
+                    src="${poem.image}"
+                    alt="${poem.imageAlt}"
+                    class="w-full h-full object-cover filter contrast-115 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-80"></div>
+                  
+                  <!-- Category Overlay Tag -->
+                  <div class="absolute top-3 left-3 bg-[#0D0D0D]/90 backdrop-blur-xs border border-[#2A2A2A] px-2.5 py-1 text-[10px] font-mono uppercase tracking-widest text-[#ECEAE4]">
+                    ${poem.categoryLabel}
+                  </div>
+
+                  <div class="absolute top-3 right-3 bg-[#0D0D0D]/90 backdrop-blur-xs border border-[#2A2A2A] px-2 py-1 text-[10px] font-mono text-[#8A8884] tabular-nums">
+                    ${poem.year}
+                  </div>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                  <div>
+                    <div class="flex items-center gap-2 text-[11px] font-mono uppercase tracking-wider text-[#8A8884] mb-2">
+                      <span>Métrica: ${poem.metric}</span>
+                    </div>
+
+                    <h3 class="font-display text-xl font-bold text-[#ECEAE4] group-hover:text-[#9B1C1C] transition-colors mb-3">
+                      ${poem.title}
+                    </h3>
+
+                    <!-- Excerpt -->
+                    <p class="font-serif italic text-sm text-[#B5B3AD] leading-relaxed line-clamp-3 mb-6">
+                      "${poem.excerpt}"
+                    </p>
+                  </div>
+
+                  <!-- Action Footer -->
+                  <div class="pt-4 border-t border-[#2A2A2A] flex items-center justify-between text-xs font-mono uppercase tracking-wider text-[#D6D4CD]">
+                    <span class="group-hover:text-[#9B1C1C] transition-colors font-semibold flex items-center gap-1.5">
+                      <span>Ler Poema Completo</span>
+                      <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                    </span>
+                    <span class="text-[11px] text-[#666]">#0${poem.id}</span>
+                  </div>
+                </div>
+              </article>
+            `;
+            })
+            .join('');
+        }
+
+        // Reinitialize Lucide Icons for freshly rendered HTML
+        if (window.lucide) {
+          lucide.createIcons();
+        }
+      }
+
+      // 5. MODAL INTERACTION
+      function openPoemModalByIndex(index) {
+        if (index < 0 || index >= POEMS_DATA.length) return;
+        currentPoemIndex = index;
+        const poem = POEMS_DATA[currentPoemIndex];
+
+        // Stop any active speech recitation
+        stopRecitation();
+
+        modalPoemTitle.textContent = poem.title;
+        modalPoemCategory.textContent = poem.categoryLabel;
+        modalPoemYear.textContent = `${poem.year} · ${poem.metric}`;
+        modalPoemImage.src = poem.image;
+        modalPoemImage.alt = poem.imageAlt;
+        modalArtCaption.textContent = poem.caption;
+        modalPoemNote.textContent = poem.note;
+        modalCounter.textContent = `0${currentPoemIndex + 1} / 0${POEMS_DATA.length}`;
+
+        // Format stanzas with pristine linebreaks and drop cap on first stanza
+        modalPoemContent.innerHTML = poem.stanzas
+          .map((stanza, sIdx) => {
+            const verseLines = stanza.map((line) => `<span class="poem-verse">${line}</span>`).join('');
+            const isFirst = sIdx === 0 ? 'drop-cap' : '';
+            return `<div class="poem-stanza ${isFirst}">${verseLines}</div>`;
+          })
+          .join('');
+
+        // Apply current font size
+        applyFontSize();
+
+        // Update Prev / Next button states
+        modalPrevBtn.disabled = currentPoemIndex === 0;
+        modalPrevBtn.style.opacity = currentPoemIndex === 0 ? '0.35' : '1';
+        modalNextBtn.disabled = currentPoemIndex === POEMS_DATA.length - 1;
+        modalNextBtn.style.opacity = currentPoemIndex === POEMS_DATA.length - 1 ? '0.35' : '1';
+
+        // Show Modal
+        poemModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+
+        // Reinit icons in modal
+        if (window.lucide) {
+          lucide.createIcons();
+        }
+
+        // Scroll poem content to top
+        document.getElementById('poem-scroll-container').scrollTop = 0;
+      }
+
+      function openPoemModalById(id) {
+        const idx = POEMS_DATA.findIndex((p) => p.id === id);
+        if (idx !== -1) {
+          openPoemModalByIndex(idx);
+        }
+      }
+
+      function closePoemModal() {
+        stopRecitation();
+        poemModal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+
+      // 6. FONT SIZE UTILITY
+      function applyFontSize() {
+        modalPoemContent.style.fontSize = `${currentFontSize}px`;
+      }
+
+      fontDecreaseBtn.addEventListener('click', () => {
+        if (currentFontSize > 14) {
+          currentFontSize -= 2;
+          applyFontSize();
+        }
+      });
+
+      fontIncreaseBtn.addEventListener('click', () => {
+        if (currentFontSize < 26) {
+          currentFontSize += 2;
+          applyFontSize();
+        }
+      });
+
+      // 7. COPY POEM TO CLIPBOARD
+      copyPoemBtn.addEventListener('click', () => {
+        const poem = POEMS_DATA[currentPoemIndex];
+        const text = `${poem.title.toUpperCase()}\nNewton Baiandeira (${poem.year})\nItabira - MG\n\n` +
+          poem.stanzas.map((stanza) => stanza.join('\n')).join('\n\n') +
+          `\n\n— Do acervo "Poesia & Matéria"`;
+
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            showToast('Poema copiado para a área de transferência!');
+            copyBtnText.textContent = 'Copiado!';
+            setTimeout(() => {
+              copyBtnText.textContent = 'Copiar';
+            }, 2000);
+          })
+          .catch(() => {
+            showToast('Falha ao copiar.');
+          });
+      });
+
+      // 8. AUDIO RECITATION (WEB SPEECH API)
+      function stopRecitation() {
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+        }
+        isReciting = false;
+        listenBtnText.textContent = 'Declamar';
+        if (window.lucide) {
+          lucide.createIcons();
+        }
+      }
+
+      listenPoemBtn.addEventListener('click', () => {
+        if (!('speechSynthesis' in window)) {
+          showToast('Navegador sem suporte a síntese de voz.');
+          return;
+        }
+
+        if (isReciting) {
+          stopRecitation();
+          return;
+        }
+
+        const poem = POEMS_DATA[currentPoemIndex];
+        const poemText = `${poem.title}. De Newton Baiandeira. ` + poem.stanzas.flat().join('. ');
+
+        recitationUtterance = new SpeechSynthesisUtterance(poemText);
+        recitationUtterance.lang = 'pt-BR';
+        recitationUtterance.rate = 0.88; // Poetic cadence, measured and grave
+        recitationUtterance.pitch = 0.95;
+
+        // Try selecting a Portuguese voice
+        const voices = window.speechSynthesis.getVoices();
+        const ptVoice = voices.find((v) => v.lang.startsWith('pt'));
+        if (ptVoice) {
+          recitationUtterance.voice = ptVoice;
+        }
+
+        recitationUtterance.onstart = () => {
+          isReciting = true;
+          listenBtnText.textContent = 'Pausar';
+        };
+
+        recitationUtterance.onend = () => {
+          stopRecitation();
+        };
+
+        recitationUtterance.onerror = () => {
+          stopRecitation();
+        };
+
+        window.speechSynthesis.speak(recitationUtterance);
+      });
+
+      // 9. TOAST NOTIFICATION UTILITY
+      function showToast(message) {
+        toastMessage.textContent = message;
+        toast.classList.remove('hidden');
+        toast.style.opacity = '1';
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          setTimeout(() => {
+            toast.classList.add('hidden');
+          }, 300);
+        }, 2800);
+      }
+
+      // 10. EVENT LISTENERS
+      // Filters
+      filterBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach((b) => {
+            b.classList.remove('active', 'bg-[#1F1F1F]', 'text-[#ECEAE4]', 'border-[#3D3D3D]');
+            b.classList.add('bg-[#121212]', 'text-[#8A8884]', 'border-[#2A2A2A]');
+          });
+
+          btn.classList.add('active', 'bg-[#1F1F1F]', 'text-[#ECEAE4]', 'border-[#3D3D3D]');
+          btn.classList.remove('bg-[#121212]', 'text-[#8A8884]', 'border-[#2A2A2A]');
+
+          currentFilter = btn.getAttribute('data-category');
+          renderPoems();
+        });
+      });
+
+      // Search
+      searchInput.addEventListener('input', (e) => {
+        currentSearch = e.target.value;
+        renderPoems();
+      });
+
+      resetSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        currentSearch = '';
+        currentFilter = 'all';
+        filterBtns.forEach((b) => {
+          if (b.getAttribute('data-category') === 'all') {
+            b.classList.add('active', 'bg-[#1F1F1F]', 'text-[#ECEAE4]', 'border-[#3D3D3D]');
+            b.classList.remove('bg-[#121212]', 'text-[#8A8884]', 'border-[#2A2A2A]');
+          } else {
+            b.classList.remove('active', 'bg-[#1F1F1F]', 'text-[#ECEAE4]', 'border-[#3D3D3D]');
+            b.classList.add('bg-[#121212]', 'text-[#8A8884]', 'border-[#2A2A2A]');
+          }
+        });
+        renderPoems();
+      });
+
+      // Modal buttons
+      modalCloseBtn.addEventListener('click', closePoemModal);
+      poemModal.addEventListener('click', (e) => {
+        if (e.target === poemModal) {
+          closePoemModal();
+        }
+      });
+
+      modalPrevBtn.addEventListener('click', () => {
+        if (currentPoemIndex > 0) {
+          openPoemModalByIndex(currentPoemIndex - 1);
+        }
+      });
+
+      modalNextBtn.addEventListener('click', () => {
+        if (currentPoemIndex < POEMS_DATA.length - 1) {
+          openPoemModalByIndex(currentPoemIndex + 1);
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (poemModal.classList.contains('hidden')) return;
+
+        if (e.key === 'Escape') {
+          closePoemModal();
+        } else if (e.key === 'ArrowLeft') {
+          if (currentPoemIndex > 0) openPoemModalByIndex(currentPoemIndex - 1);
+        } else if (e.key === 'ArrowRight') {
+          if (currentPoemIndex < POEMS_DATA.length - 1) openPoemModalByIndex(currentPoemIndex + 1);
+        }
+      });
+
+      // Initial Render
+      document.addEventListener('DOMContentLoaded', () => {
+        renderPoems();
+        if (window.lucide) {
+          lucide.createIcons();
+        }
+      });
+
+      // Also render immediately in case DOM is already ready
+      renderPoems();
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    </script>
+  </body>
+</html>

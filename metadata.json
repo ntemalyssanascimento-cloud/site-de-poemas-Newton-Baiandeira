@@ -1,0 +1,6 @@
+{
+  "name": "Newton Baiandeira - Poesia & Matéria",
+  "description": "Exposição imersiva e acervo poético visceral do artista itabirano Newton Baiandeira.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
